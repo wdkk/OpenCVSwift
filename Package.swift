@@ -1,8 +1,6 @@
 // swift-tools-version: 5.7
 import PackageDescription
 
-let version = "4.7.0"
-
 let package = Package(
     name: "opencv2",
     platforms: [
@@ -11,17 +9,17 @@ let package = Package(
     products: [
         .library(
             name: "opencv2",
-            targets: ["opencv2", "opencv2-dependencies"]
+            targets: [ "opencv2", "linkedframeworks-for-opencv2" ]
         ),
     ],
     targets: [
         .binaryTarget(
             name: "opencv2",
-            url: "https://archive.wdkk.co.jp/opencv/\(version)/opencv2.xcframework.zip",
+            url: "https://archive.wdkk.co.jp/opencv/4.7.0/opencv2.xcframework.zip",
             checksum: "05d8b272b416ebb35ffaa16e58d20e75c04d7bb1c506cf7188e710a7de55ba13"
         ),
         .target(
-            name: "opencv2-dependencies",
+            name: "linkedframeworks-for-opencv2",
             linkerSettings: [
                 .linkedFramework("AVFoundation"),
                 .linkedFramework("CoreImage"),
