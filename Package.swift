@@ -4,21 +4,21 @@ import PackageDescription
 let version = "4.7.0"
 
 let package = Package(
-    name: "OpenCV2",
+    name: "opencv2",
     platforms: [
         .macOS(.v12), .iOS(.v15)
     ],
     products: [
         .library(
-            name: "OpenCV2",
-            targets: ["OpenCV2", "opencv2-dependencies"]
+            name: "opencv2",
+            targets: ["opencv2", "opencv2-dependencies"]
         ),
     ],
     targets: [
         .binaryTarget(
-            name: "OpenCV2",
+            name: "opencv2",
             url: "https://archive.wdkk.co.jp/opencv/\(version)/opencv2.xcframework.zip",
-            checksum: "e9605b0911f8087cde520106baf27d3ab9b70b30b5803bfbc729dacfa8cfedd0"
+            checksum: "05d8b272b416ebb35ffaa16e58d20e75c04d7bb1c506cf7188e710a7de55ba13"
         ),
         .target(
             name: "opencv2-dependencies",
